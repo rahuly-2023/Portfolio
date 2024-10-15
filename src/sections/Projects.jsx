@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from 'react'
 import { myProjects } from '../constants'
 import { Canvas } from '@react-three/fiber';
-import { Center } from '@react-three/drei';
+import { Center, OrbitControls } from '@react-three/drei';
 import CanvasLoader from '../components/Loading';
 import DemoComputer from '../components/DemoComputer';
 
@@ -23,7 +23,7 @@ const Projects = () => {
     }
 
   return (
-    <section className='c-space my-20'>
+    <section className='c-space my-20' id="project">
         <p className='head-text'>Projects</p>
 
         <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
@@ -70,15 +70,16 @@ const Projects = () => {
 
             <div className='border border-black-300 bg-black-200 rounded-lg h-96 md:h-full'>
                 <Canvas>
-                    <ambientLight intensity={1} />
+                    <ambientLight intensity={4} />
                     <directionalLight position={[10,10,5]} />
                     <Center> 
                         <Suspense fallback={<CanvasLoader/>}>
                             <group scale={2} position={[0,-3,0]} rotation={[0,-0.1,0]}>
-                                <DemoComputer/>
+                                <DemoComputer texture={currentProject.texture}/>
                             </group>
                         </Suspense>
                     </Center>
+                    <OrbitControls maxPolarAngle={Math.PI/2} enableZoom={false} />
                 </Canvas>
             </div>
         </div>

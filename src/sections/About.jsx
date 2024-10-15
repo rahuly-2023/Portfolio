@@ -16,23 +16,32 @@ const About = () => {
   };
 
   return (
-    <section className='c-space my-20'>
+    <section className='c-space my-20 pt-20' id="about">
         <div className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full'>
             <div className='col-span-1 xl:row-span-3'>
                 <div className='grid-container'>
                     <img src="/assets/grid1.png" alt="grid-1" className='w-full sm:h-[276px] h-fit object-contain'/>
                     <div>
                         <p className='grid-headtext'>Hi, I'm Rahul</p>
-                        <p className='grid-subtext'>I'm a software developer with a passion for building scalable and </p>
+                        <p className='grid-subtext'>I'm a competitive programmer with a passion for building scalable projects </p>
                     </div>
                 </div>
             </div>
-            <div className='"col-span-1 xl:row-span-3'>
-                <div className='grid-container'>
-                    <img src="/assets/grid2.png" alt="grid2" className='w-full sm:w-[276px] h-fit object-contain'/>
+            <div className='col-span-1 xl:row-span-3' id='resume'>
+                <div className='grid-container border'>
+                    <div className='flex justify-center'>
+                        <img src="/assets/resume.png" alt="grid2" className='w-full h-fit sm:w-[276px] object-contain'/>
+                    </div>
                     <div>
-                        <p className='grid-headtext'>Tech Stack</p>
-                        <p className='grid-subtext'> I specialize in JavaScript with focus on React and Node.js</p>
+                        <p className='grid-headtext text-center'>Resume</p>
+                        <a href='https://drive.google.com/file/d/17VknaePZG71ILOZ427tcB6945w0IqFg_/view?usp=sharing' target='_blank'>
+                            <button className='btn w-full mt-10'>
+
+                            <img src="/assets/arrow-up.png" className='w-5 h-5' alt="arrow" />
+                                
+                                View Resume
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -54,7 +63,9 @@ const About = () => {
                     <div>
                         <p className="grid-headtext">I'm very flexible with time zone communications & locations</p>
                         <p className="grid-subtext">I&apos;m based in India and open to remote work worldwide.</p>
-                        <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                        <a href='#contact' >
+                            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                        </a>
                     </div>
                 </div>
             </div>
