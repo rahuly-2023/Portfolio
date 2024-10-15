@@ -24,8 +24,8 @@ const Contact = () => {
 
         try{
             await emailjs.send(
-                'service_nbtk8we',
-                'template_4nako9k', 
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: form.name,
                     to_name: 'Rahul',
@@ -33,7 +33,7 @@ const Contact = () => {
                     to_email: 'rahul8700yadav@gmail.com',
                     message: form.message
                 },
-                'XFVAwOA-XvlXBR14U'
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
             )
 
             setLoading(false);
@@ -52,9 +52,11 @@ const Contact = () => {
         }
 
     }
+    console.log(import.meta.env);
 
 
   return (
+    
     <section className='c-space m-20 pt-20' id='contact'>
         <div className='relative min-h-screen flex items-center justify-center flex-col'>
             <img src="/assets/terminal.png" alt="terminal background" className='absolute inset-0 min-h-screen' />
