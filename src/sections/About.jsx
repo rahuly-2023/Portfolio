@@ -34,7 +34,7 @@ const About = () => {
                     </div>
                     <div>
                         <p className='grid-headtext text-center'>Resume</p>
-                        <a href='https://drive.google.com/file/d/17VknaePZG71ILOZ427tcB6945w0IqFg_/view?usp=sharing' target='_blank'>
+                        <a href='https://drive.google.com/file/d/18T30jwqAghLybPk4E5cnmUkyQD64K7Sb/view?usp=sharing' target='_blank'>
                             <button className='btn w-full mt-10'>
 
                             <img src="/assets/arrow-up.png" className='w-5 h-5' alt="arrow" />
